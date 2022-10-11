@@ -72,7 +72,7 @@ php artisan serve
 
 | Plugin | Version |
 | ------ | ------ |
-| Backpack | v5.2 |
+| Backpack | v5.3 |
 
 
 ## Development
