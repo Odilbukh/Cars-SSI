@@ -21,7 +21,7 @@ class CarModelCrudController extends CrudController
 
     /**
      * Configure the CrudPanel object. Apply settings to all operations.
-     * 
+     *
      * @return void
      */
     public function setup()
@@ -33,20 +33,20 @@ class CarModelCrudController extends CrudController
 
     /**
      * Define what happens when the List operation is loaded.
-     * 
+     *
      * @see  https://backpackforlaravel.com/docs/crud-operation-list-entries
      * @return void
      */
     protected function setupListOperation()
     {
         CRUD::column('id')->label('ID');
-        CRUD::column('name')->label('Название');
-        CRUD::column('brand.name')->label('Бренд');
+        CRUD::column('brand.name')->label('Марка');
+        CRUD::column('name')->label('Модель');
     }
 
     /**
      * Define what happens when the Create operation is loaded.
-     * 
+     *
      * @see https://backpackforlaravel.com/docs/crud-operation-create
      * @return void
      */
@@ -56,12 +56,11 @@ class CarModelCrudController extends CrudController
 
         CRUD::field('name')->label('Название');
         CRUD::field('brand_id')->type('select')->label('Бренд')->entity('brand');
-
     }
 
     /**
      * Define what happens when the Update operation is loaded.
-     * 
+     *
      * @see https://backpackforlaravel.com/docs/crud-operation-update
      * @return void
      */

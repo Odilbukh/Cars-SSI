@@ -25,8 +25,8 @@ class CarModelRequest extends FormRequest
     public function rules()
     {
         return [
-             'name' => 'required|max:255',
-             'brand_id' => 'required|integer|exists:brands,id'
+            'name' => 'required|max:255',
+            'brand_id' => 'required|integer|exists:brands,id'
         ];
     }
 

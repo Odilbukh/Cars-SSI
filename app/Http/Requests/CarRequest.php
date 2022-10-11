@@ -54,7 +54,15 @@ class CarRequest extends FormRequest
     public function messages()
     {
         return [
-            //
+            'car_model_id.required' => 'Поля Модель обязательный',
+            'car_model_id.exists' => 'Модель не существует',
+            'year_issue.required' => 'Поля Год выпуска обязательный',
+            'year_issue.integer' => 'Можно только число',
+            'year_issue.min' => 'Минимум 4 символа',
+            'car_number.required' => 'Поля Госномер автомобиля обязательный',
+            'color.required' => 'Поля Цвет обязательный',
+            'daily_coast.required' => 'Поля Цена аренды в сутки обязательный',
+            'image.image' => 'Можно загрузить только фото'
         ];
     }
 }

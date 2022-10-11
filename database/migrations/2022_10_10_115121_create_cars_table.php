@@ -17,10 +17,10 @@ return new class extends Migration
             $table->id();
             $table->foreignId('car_model_id')->constrained('car_models');
             $table->string('image')->nullable();
-            $table->year('year_issue');
+            $table->integer('year_issue');
             $table->string('car_number');
             $table->string('color');
-            $table->enum('kp', ['АВТОМАТ','МЕХАНИК'])->default('АВТОМАТ');
+            $table->enum('kp', ['АВТОМАТ', 'МЕХАНИК'])->default('АВТОМАТ');
             $table->decimal('daily_coast')->default(0);
             $table->timestamps();
         });
